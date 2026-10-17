@@ -15,12 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.S8131650Assignment2">
 
-        <!-- Dashboard opens after successful authentication -->
+        <!-- Displays full details of the selected entity -->
+        <activity
+            android:name=".ui.details.DetailsActivity"
+            android:exported="false" />
+
+        <!-- Displays entities retrieved from the university API -->
         <activity
             android:name=".ui.dashboard.DashboardActivity"
             android:exported="false" />
 
-        <!-- MainActivity is the initial Login screen -->
+        <!-- Main entry point: Student Login screen -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
