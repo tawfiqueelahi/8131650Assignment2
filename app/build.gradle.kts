@@ -36,6 +36,11 @@ android {
 }
 
 dependencies {
+
+    // Tests ViewModel coroutines without a real server.
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
+
+
     implementation("com.google.dagger:hilt-android:2.60.1")
     ksp("com.google.dagger:hilt-compiler:2.60.1")
 
