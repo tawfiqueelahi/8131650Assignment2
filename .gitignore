@@ -1,0 +1,60 @@
+
+# ==========================================
+# NIT3213 - Android Assignment 2
+# Git Ignore Configuration
+# ==========================================
+
+# Gradle generated files and caches
+.gradle/
+.kotlin/
+**/build/
+
+# Local Android SDK configuration
+local.properties
+
+# Android Studio IDE files
+.idea/
+*.iml
+
+# Generated APK and App Bundle files
+*.apk
+*.aab
+*.ap_
+
+# Android Studio captures and profiling
+captures/
+*.hprof
+*.jfr
+
+# Native build files
+.externalNativeBuild/
+.cxx/
+**/.externalNativeBuild/
+**/.cxx/
+
+# Signing keys and private credentials
+*.jks
+*.keystore
+*.p12
+*.pfx
+keystore.properties
+secrets.properties
+.env
+.env.*
+
+# Operating system generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary and log files
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# Local generated output
+out/
+tmp/
+temp/

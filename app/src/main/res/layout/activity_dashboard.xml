@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F7F9FC">
+
+    <!-- Dashboard heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#19283D"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvEntityCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loading entities..."
+        android:textSize="14sp"
+        android:textColor="#607086"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Shown while retrieving data -->
+    <ProgressBar
+        android:id="@+id/dashboardProgress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvDashboardError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#B3261E"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retry"
+        android:visibility="gone"/>
+
+    <!-- Displays API entities without descriptions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEntities"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"/>
+
+</LinearLayout>
