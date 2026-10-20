@@ -89,7 +89,8 @@ class LoginViewModel @Inject constructor(
 
             } catch (e: IOException) {
                 _uiState.value = LoginUiState.Error(
-                    "Network error. Check your internet connection."
+                    "Unable to reach the server. Please wait and try again."
+
                 )
 
             } catch (e: Exception) {

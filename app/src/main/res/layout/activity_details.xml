@@ -1,51 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F7F9FC">
+    android:background="#F6F8FC"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="32dp">
 
-        <!-- Return to the Dashboard -->
-        <Button
+        <!-- Return to Dashboard -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back to Dashboard"
-            android:textAllCaps="false"/>
+            android:layout_height="48dp"
+            android:text="← Back to Dashboard"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#2563EB"
+            app:cornerRadius="14dp"
+            app:elevation="2dp"
+            android:layout_marginBottom="28dp" />
 
+        <!-- Section label -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Entity Details"
-            android:textSize="16sp"
-            android:textColor="#607086"
-            android:layout_marginTop="24dp"/>
+            android:text="ENTITY DETAILS"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.14"
+            android:textColor="#2563EB"
+            android:layout_marginBottom="8dp" />
 
-        <!-- Entity name received from the selected card -->
+        <!-- Selected entity name -->
         <TextView
             android:id="@+id/tvDetailsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="#19283D"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="24dp"/>
+            android:textColor="#1F2937"
+            android:layout_marginBottom="14dp" />
 
+        <!-- Blue accent -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:backgroundTint="#2563EB"
+            android:background="@android:color/white"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Entity information -->
         <com.google.android.material.card.MaterialCardView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="14dp"
+            app:cardCornerRadius="18dp"
             app:cardBackgroundColor="#FFFFFF"
-            app:cardElevation="2dp">
+            app:cardElevation="2dp"
+            app:strokeColor="#E2E8F0"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,41 +83,60 @@
                     android:text="Information"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="#19283D"
-                    android:layout_marginBottom="16dp"/>
+                    android:textColor="#1F2937"
+                    android:layout_marginBottom="18dp" />
 
-                <!-- All entity properties except description -->
+                <!-- All properties except description -->
                 <TextView
                     android:id="@+id/tvEntityProperties"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:lineSpacingExtra="5dp"
-                    android:textColor="#40536A"/>
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#40536A" />
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
-        <TextView
+        <!-- Description card -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#19283D"
-            android:layout_marginTop="28dp"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="18dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="2dp"
+            app:strokeColor="#E2E8F0"
+            app:strokeWidth="1dp">
 
-        <!-- Full description is displayed only on this screen -->
-        <TextView
-            android:id="@+id/tvEntityDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:lineSpacingExtra="6dp"
-            android:textColor="#40536A"
-            android:paddingBottom="32dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2937"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- Full description from selected entity -->
+                <TextView
+                    android:id="@+id/tvEntityDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="#40536A" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>
